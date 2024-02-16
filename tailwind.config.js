@@ -4,7 +4,21 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bt_font_regular: ["bt_font_regular", "Calibri", "Arial", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+      },
+      colors: {
+        primary: "#5514b4",
+        darkGray: "#2b2b2b",
+        lightGray: "#dddddd",
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+        },
       },
     },
   },

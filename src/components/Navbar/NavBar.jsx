@@ -1,71 +1,32 @@
-import { useState } from "react";
-import { NavList } from "../../data/NavList";
-import { MdKeyboardArrowRight } from "react-icons/md";
-
-const NavBar = () => {
-  const [showBroadbandCard, setShowBroadbandCard] = useState(false);
-
-  const handleBroadbandHover = () => {
-    setShowBroadbandCard(true);
-  };
-
-  const handleBroadbandLeave = () => {
-    setShowBroadbandCard(false);
-  };
+import { RiArrowRightSLine } from "react-icons/ri";
+import NavbarBottom from "./NavbarBottom";
+const Navbar = () => {
   return (
-    <div className="bg-purple-900 py-5 text-white ">
-      <div className="container m-auto flex items-center gap-8 justify-center ">
-        <div>
-          <img
-            src="https://img01.bt.co.uk/s/assets/090224/images/logo/logo-2018.svg"
-            alt="Logo"
-            className="w-12"
-          />
-        </div>
-        <div className="flex justify-between gap-8">
-          <ul className="flex justify-between gap-8">
-            {NavList.map((item, index) => (
-              <li
-                key={index}
-                className="text-md hover:border-b py-3 cursor-pointer "
-                onMouseEnter={() => {
-                  if (item === "Broadband") {
-                    handleBroadbandHover();
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (item === "Broadband") {
-                    handleBroadbandLeave();
-                  }
-                }}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-          <ul className="flex gap-8">
-            <li className="text-md hover:border-b py-3 cursor-pointer ">
-              Help
-            </li>
-            <li className="text-md hover:border-b py-3 cursor-pointer ">
-              My BT
-            </li>
-            <li className="text-md hover:border-b py-3 cursor-pointer ">
-              Email
-            </li>
-          </ul>
+    <div className="bg-lightGray">
+      {/* upper section */}
+      <div className="container h-[38px] flex items-center">
+        <div className="flex gap-4 text-sm py-2">
+          <a href="#" className="hover:border-b-[1px] border-black/60">
+            For the home
+          </a>
+          <a href="#" className="hover:border-b-[1px] border-black/60">
+            For business and public sector
+          </a>
+          <a href="#" className="hover:border-b-[1px] border-black/60">
+            For global business{" "}
+          </a>
+          <p>|</p>
+          <p className="flex items-center text-primary">
+            UK{" "}
+            <span>
+              <RiArrowRightSLine className="text-xl font" />
+            </span>
+          </p>
         </div>
       </div>
-      {showBroadbandCard && (
-        <div className="absolute top-[88px] left-[30rem] w-1/2 m-auto bg-white p-4 shadow-md">
-          <div className="flex items-center border-b">
-            <p className="text-black font-bold underline">Broadband </p>
-            <MdKeyboardArrowRight className="text-black text-xl" />
-          </div>
-        </div>
-      )}
+      <NavbarBottom />
     </div>
   );
 };
 
-export default NavBar;
+export default Navbar;

@@ -4,10 +4,10 @@ import NavBar from "./components/Navbar/NavBar";
 
 const App = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <NavBar />
       <Hero />
-    </>
+    </div>
   );
 };
 
