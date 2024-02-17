@@ -4,6 +4,7 @@ import PieChart from "../../components/Charts/PieChart";
 import ScatterPlot from "../../components/Charts/ScatterPlot";
 import Hero from "../../components/Hero/Hero";
 import Navbar from "../../components/Navbar/NavBar";
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <PieChart />
       <BarGraph />
       <LineGraph />
+      <VideoPlayer />
     </>
   );
 };

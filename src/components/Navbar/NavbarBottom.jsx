@@ -33,7 +33,9 @@ const NavbarBottom = () => {
       <div className="bg-primary">
         <div className="container flex gap-10 items-center">
           {/* logo section */}
-          <img src={Logo} alt="" className="w-[46px]" />
+          <Link to="/">
+            <img src={Logo} alt="" className="w-[46px] cursor-pointer" />
+          </Link>
           <div className="flex gap-4 justify-between w-full text-white">
             <div>
               <ul className="flex gap-12">
