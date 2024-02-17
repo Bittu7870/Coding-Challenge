@@ -25,6 +25,7 @@ import {
   TVWatchList,
   UpgradeList,
 } from "../../data/NavList";
+import { Link } from "react-router-dom";
 
 const NavbarBottom = () => {
   return (
@@ -513,15 +514,15 @@ const NavbarBottom = () => {
                           </ul>
                         </div>
                         <div className="space-y-3">
-                          <a
-                            href="#"
+                          <Link
+                            to="/login"
                             className="border-b-[1px] border-lightGray hover:border-b-[1px] hover:border-primary  flex items-center gap-2  font-bold"
                           >
                             Log in{" "}
                             <span>
                               <RiArrowRightSLine />
                             </span>
-                          </a>
+                          </Link>
                           <a
                             href="#"
                             className="border-b-[1px] border-lightGray hover:border-b-[1px] hover:border-primary  flex items-center gap-2  font-bold"
