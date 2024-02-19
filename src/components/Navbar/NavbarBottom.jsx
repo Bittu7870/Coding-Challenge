@@ -39,62 +39,81 @@ const NavbarBottom = () => {
           <div className="flex gap-4 justify-between w-full text-white">
             <div>
               <ul className="flex gap-12">
-                <li className="group">
-                  <a href="#" className="flex items-center h-[80px]">
-                    Broadband
-                  </a>
+                <li className="group ">
+                  <div className="p-8">
+                    <a
+                      href="#"
+                      className="flex items-center border-b-[2px] border-primary hover:border-b-[2px] hover:border-white"
+                    >
+                      Broadband
+                    </a>
+                  </div>
+
                   {/* dropdown full width section */}
-                  <div className="absolute left-0 z-[99999] hidden p-2 text-black group-hover:block w-full bg-white">
+                  <div className="absolute left-[11%] w-[80%] z-[99999] hidden p-2 text-black group-hover:block  bg-white">
                     <div className="container py-7 ">
-                      <div className=" grid grid-cols-2 lg:grid-cols-4">
-                        <div className="space-y-3">
-                          <h1 className="border-b-[1px] border-lightGray hover:border-b-[1px] hover:border-primary  flex items-center gap-2 font-bold">
-                            Broadband{" "}
-                            <span>
-                              <RiArrowRightSLine />
+                      <div className=" grid grid-cols-2 lg:grid-cols-3">
+                        <div className="space-y-3 me-4">
+                          <h1 className="border-b-[1px] border-lightGray  flex items-center   ">
+                            <span className="group hover:border-b-[1px] hover:border-primary  flex gap-2 font-bold">
+                              Broadband
+                              <span>
+                                <RiArrowRightSLine />
+                              </span>
                             </span>
                           </h1>
                           <ul className="space-y-3">
                             {BroadbandList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[2px] border-primary cursor-pointer"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index} className="cursor-pointer">
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
                         </div>
-                        <div className="space-y-3">
+                        <div className="space-y-3 me-4">
                           <h1 className="border-b-[1px] border-lightGray hover:border-b-[1px] hover:border-primary  flex items-center gap-2  font-bold">
                             Landline{" "}
                             <span>
                               <RiArrowRightSLine />
                             </span>
                           </h1>
-                          <ul className="space-y-3">
-                            {LandlineList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
-                              </li>
-                            ))}
-                          </ul>
+                          <div className="flex justify-between">
+                            <div>
+                              <ul className="space-y-3">
+                                {LandlineList.map((item, index) => (
+                                  <li key={index} className="">
+                                    <a
+                                      href="#"
+                                      className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                    >
+                                      {item}
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div className="space-y-3">
+                              <ul className="space-y-3">
+                                {LandlinesList.map((item, index) => (
+                                  <li key={index}>
+                                    <a
+                                      href="#"
+                                      className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                    >
+                                      {item}
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
                         </div>
-                        <div className="space-y-3">
-                          <ul className="space-y-3 pt-8  ">
-                            {LandlinesList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+
                         <div className="space-y-3">
                           <h1 className="border-b-[1px] border-lightGray hover:border-b-[1px] hover:border-primary  flex items-center gap-2  font-bold">
                             Switching to BT and moving
@@ -104,11 +123,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {SwitchingBTList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -118,27 +139,37 @@ const NavbarBottom = () => {
                   </div>
                 </li>
                 <li className="group">
-                  <a href="#" className="h-[80px] flex items-center">
-                    TV
-                  </a>
+                  <div className="p-8">
+                    <a
+                      href="#"
+                      className="flex items-center border-b-[2px] border-primary hover:border-b-[2px] hover:border-white"
+                    >
+                      TV
+                    </a>
+                  </div>
+
                   {/* dropdown full width section */}
-                  <div className="absolute left-0 z-[99999] hidden p-2 text-black group-hover:block w-full bg-white">
+                  <div className="absolute left-[11%] w-[80%] z-[99999] hidden p-2 text-black group-hover:block  bg-white">
                     <div className="container py-7 ">
                       <div className=" grid grid-cols-2 lg:grid-cols-3">
-                        <div className="space-y-3">
-                          <h1 className="border-b-[1px] border-lightGray hover:border-b-[1px] hover:border-primary  flex items-center gap-2 font-bold">
-                            TV{" "}
-                            <span>
-                              <RiArrowRightSLine />
+                        <div className="space-y-3 me-4">
+                          <h1 className="border-b-[1px] border-lightGray  flex items-center">
+                            <span className="group hover:border-b-[1px] hover:border-primary  flex gap-2 font-bold">
+                              TV
+                              <span>
+                                <RiArrowRightSLine />
+                              </span>
                             </span>
                           </h1>
                           <ul className="space-y-3">
                             {TVList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[2px] border-primary cursor-pointer"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index} className="cursor-pointer">
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -152,11 +183,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {TVWatchList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -171,11 +204,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {TVSportsList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -201,11 +236,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {TNTDealList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[2px] border-primary cursor-pointer"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index} className="cursor-pointer">
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -220,11 +257,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {TNTWatchList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -238,11 +277,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {TNTSportList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -250,11 +291,13 @@ const NavbarBottom = () => {
                         <div className="space-y-3">
                           <ul className="space-y-3 pt-8  ">
                             {TNTSportsList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -280,11 +323,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {MobileList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[2px] border-primary cursor-pointer"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index} className="cursor-pointer">
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -325,11 +370,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {HelpAndSupportList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[2px] border-primary cursor-pointer"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index} className="cursor-pointer">
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -337,11 +384,13 @@ const NavbarBottom = () => {
                         <div className="space-y-3">
                           <ul className="space-y-3 pt-8  ">
                             {HelpAndSupportsList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -355,11 +404,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {FaultList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -374,11 +425,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {HelpfulList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -386,11 +439,13 @@ const NavbarBottom = () => {
                         <div className="space-y-3">
                           <ul className="space-y-3 pt-8  ">
                             {HelpfulLists.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -404,11 +459,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {GetInTouchList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -434,11 +491,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {BillsList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[2px] border-primary cursor-pointer"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index} className="cursor-pointer">
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -452,11 +511,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {ProductsList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -470,11 +531,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {UpgradeList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -488,11 +551,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {DetailsList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
@@ -506,11 +571,13 @@ const NavbarBottom = () => {
                           </h1>
                           <ul className="space-y-3">
                             {OrdersList.map((item, index) => (
-                              <li
-                                key={index}
-                                className="hover:border-b-[1px] border-primary"
-                              >
-                                <a href="#">{item}</a>
+                              <li key={index}>
+                                <a
+                                  href="#"
+                                  className="border-b-[2px] border-white hover:border-b-[2px] hover:border-primary"
+                                >
+                                  {item}
+                                </a>
                               </li>
                             ))}
                           </ul>
